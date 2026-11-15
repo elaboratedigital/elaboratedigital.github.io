@@ -11,7 +11,11 @@
     "tagline": "Fresh, simple meals from a Baltimore kitchen.",
     "heroHeadline": "Eat a little greener.",
     "heroSubhead": "Placeholder copy. A neighborhood kitchen for bowls, wraps, and everyday greens. Swap this text for the client's own words.",
-    "heroNote": "This is a working preview with fake menu items and prices so the site can be reviewed before real content arrives."
+    "heroNote": "This is a working preview with fake menu items and prices so the site can be reviewed before real content arrives.",
+    "heroImage": "assets/images/hero-bowl-photo.svg",
+    "heroImageJpg": "assets/images/hero-bowl.jpg",
+    "heroImageFallback": "assets/images/hero-bowl.svg",
+    "heroImageWebp": "assets/images/hero-bowl.webp"
   },
   "contact": {
     "addressLine1": "PLACEHOLDER \u2014 street address to be confirmed",
@@ -75,7 +79,11 @@
       "The Kale Company serves fresh, plant-forward food in Baltimore, Maryland. This paragraph is placeholder copy and should be replaced with the client's own story.",
       "This site is a straightforward way to browse a menu, place a pickup or delivery order, and pay by card or at pickup. Delivery is handled by the restaurant's own driver. Grill Hearty's is a separate project and is not part of this website.",
       "Real photos, hours, menu items, prices, and the pickup address will be swapped in as soon as the client provides them. Until then, everything you see here is clearly marked as a placeholder."
-    ]
+    ],
+    "storefrontImage": "assets/images/about-storefront-photo.svg",
+    "storefrontImageJpg": "assets/images/about-storefront.jpg",
+    "storefrontCaption": "Placeholder storefront photograph of a hypothetical kitchen. Not the real location.",
+    "storefrontImageWebp": "assets/images/about-storefront.webp"
   },
   "contactPage": {
     "intro": "Questions about an order or the menu? Use the placeholder details below, or try the form. The form does not send messages yet \u2014 it is here so the layout can be reviewed.",
@@ -97,32 +105,44 @@
             "name": "Garden Kale Bowl",
             "description": "Illustrative mixed kale, grains, and colorful toppings. Placeholder item \u2014 not a real dish.",
             "price": 12.5,
-            "image": "assets/images/bowl.svg",
-            "soldOut": false
+            "image": "assets/images/garden-kale-bowl-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/garden-kale-bowl.jpg",
+            "imageFallback": "assets/images/bowl.svg",
+            "imageWebp": "assets/images/garden-kale-bowl.webp"
           },
           {
             "id": "lemon-herb-bowl",
             "name": "Lemon-Herb Chicken & Kale Bowl",
             "description": "Illustrative greens, grains, and a lemon-herb finish. Placeholder item \u2014 protein and ingredients to be confirmed.",
             "price": 14.75,
-            "image": "assets/images/bowl-herb.svg",
-            "soldOut": false
+            "image": "assets/images/lemon-herb-bowl-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/lemon-herb-bowl.jpg",
+            "imageFallback": "assets/images/bowl-herb.svg",
+            "imageWebp": "assets/images/lemon-herb-bowl.webp"
           },
           {
             "id": "roasted-veggie-bowl",
             "name": "Roasted Veggie Grain Bowl",
             "description": "Illustrative roasted vegetables over a hearty grain base. Placeholder item.",
             "price": 13.25,
-            "image": "assets/images/bowl.svg",
-            "soldOut": false
+            "image": "assets/images/roasted-veggie-bowl-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/roasted-veggie-bowl.jpg",
+            "imageFallback": "assets/images/bowl.svg",
+            "imageWebp": "assets/images/roasted-veggie-bowl.webp"
           },
           {
             "id": "chili-lime-bowl",
             "name": "Chili-Lime Black Bean Bowl",
             "description": "Illustrative beans, greens, and a chili-lime dressing. Placeholder item.",
             "price": 12.95,
-            "image": "assets/images/bowl-chili.svg",
-            "soldOut": false
+            "image": "assets/images/chili-lime-bowl-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/chili-lime-bowl.jpg",
+            "imageFallback": "assets/images/bowl-chili.svg",
+            "imageWebp": "assets/images/chili-lime-bowl.webp"
           }
         ]
       },
@@ -135,24 +155,33 @@
             "name": "Kale Caesar Wrap",
             "description": "Illustrative chopped kale wrap with a Caesar-style dressing. Placeholder item.",
             "price": 11.5,
-            "image": "assets/images/wrap.svg",
-            "soldOut": false
+            "image": "assets/images/kale-caesar-wrap-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/kale-caesar-wrap.jpg",
+            "imageFallback": "assets/images/wrap.svg",
+            "imageWebp": "assets/images/kale-caesar-wrap.webp"
           },
           {
             "id": "hummus-crunch-wrap",
             "name": "Hummus Crunch Wrap",
             "description": "Illustrative hummus, crisp vegetables, and greens in a wrap. Placeholder item.",
             "price": 11.25,
-            "image": "assets/images/wrap-harvest.svg",
-            "soldOut": false
+            "image": "assets/images/hummus-crunch-wrap-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/hummus-crunch-wrap.jpg",
+            "imageFallback": "assets/images/wrap-harvest.svg",
+            "imageWebp": "assets/images/hummus-crunch-wrap.webp"
           },
           {
             "id": "harvest-veggie-wrap",
             "name": "Harvest Veggie Wrap",
             "description": "Illustrative seasonal vegetables and greens. Placeholder item.",
             "price": 10.95,
-            "image": "assets/images/wrap.svg",
-            "soldOut": true
+            "image": "assets/images/harvest-veggie-wrap-photo.svg",
+            "soldOut": true,
+            "imageJpg": "assets/images/harvest-veggie-wrap.jpg",
+            "imageFallback": "assets/images/wrap.svg",
+            "imageWebp": "assets/images/harvest-veggie-wrap.webp"
           }
         ]
       },
@@ -165,24 +194,33 @@
             "name": "Everyday Greens",
             "description": "Illustrative mixed greens with a bright, simple finish. Placeholder item.",
             "price": 9.5,
-            "image": "assets/images/salad.svg",
-            "soldOut": false
+            "image": "assets/images/everyday-greens-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/everyday-greens.jpg",
+            "imageFallback": "assets/images/salad.svg",
+            "imageWebp": "assets/images/everyday-greens.webp"
           },
           {
             "id": "apple-kale-crunch",
             "name": "Apple & Kale Crunch",
             "description": "Illustrative kale, apple, and a crunchy topping. Placeholder item.",
             "price": 11.0,
-            "image": "assets/images/salad-apple.svg",
-            "soldOut": false
+            "image": "assets/images/apple-kale-crunch-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/apple-kale-crunch.jpg",
+            "imageFallback": "assets/images/salad-apple.svg",
+            "imageWebp": "assets/images/apple-kale-crunch.webp"
           },
           {
             "id": "mediterranean-kale",
             "name": "Mediterranean Kale Salad",
             "description": "Illustrative kale with a Mediterranean-style mix. Placeholder item.",
             "price": 11.75,
-            "image": "assets/images/salad.svg",
-            "soldOut": false
+            "image": "assets/images/mediterranean-kale-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/mediterranean-kale.jpg",
+            "imageFallback": "assets/images/salad.svg",
+            "imageWebp": "assets/images/mediterranean-kale.webp"
           }
         ]
       },
@@ -195,24 +233,33 @@
             "name": "Green Glow Smoothie",
             "description": "Illustrative blended greens drink. Placeholder item \u2014 ingredients to be confirmed.",
             "price": 7.5,
-            "image": "assets/images/smoothie.svg",
-            "soldOut": false
+            "image": "assets/images/green-glow-smoothie-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/green-glow-smoothie.jpg",
+            "imageFallback": "assets/images/smoothie.svg",
+            "imageWebp": "assets/images/green-glow-smoothie.webp"
           },
           {
             "id": "berry-kale-smoothie",
             "name": "Berry Kale Smoothie",
             "description": "Illustrative berry and kale blend. Placeholder item.",
             "price": 7.75,
-            "image": "assets/images/smoothie-berry.svg",
-            "soldOut": false
+            "image": "assets/images/berry-kale-smoothie-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/berry-kale-smoothie.jpg",
+            "imageFallback": "assets/images/smoothie-berry.svg",
+            "imageWebp": "assets/images/berry-kale-smoothie.webp"
           },
           {
             "id": "citrus-cooler",
             "name": "Citrus Cooler Juice",
             "description": "Illustrative citrus juice. Placeholder item.",
             "price": 6.5,
-            "image": "assets/images/juice.svg",
-            "soldOut": false
+            "image": "assets/images/citrus-cooler-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/citrus-cooler.jpg",
+            "imageFallback": "assets/images/juice.svg",
+            "imageWebp": "assets/images/citrus-cooler.webp"
           }
         ]
       },
@@ -225,24 +272,33 @@
             "name": "Garlic Kale",
             "description": "Illustrative saut\u00e9ed kale side. Placeholder item.",
             "price": 4.5,
-            "image": "assets/images/side.svg",
-            "soldOut": false
+            "image": "assets/images/garlic-kale-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/garlic-kale.jpg",
+            "imageFallback": "assets/images/side.svg",
+            "imageWebp": "assets/images/garlic-kale.webp"
           },
           {
             "id": "sweet-potatoes",
             "name": "Seasoned Sweet Potatoes",
             "description": "Illustrative roasted sweet potato side. Placeholder item.",
             "price": 4.75,
-            "image": "assets/images/side-potato.svg",
-            "soldOut": false
+            "image": "assets/images/sweet-potatoes-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/sweet-potatoes.jpg",
+            "imageFallback": "assets/images/side-potato.svg",
+            "imageWebp": "assets/images/sweet-potatoes.webp"
           },
           {
             "id": "cucumber-herb",
             "name": "Cucumber-Herb Salad",
             "description": "Illustrative cucumber side salad. Placeholder item.",
             "price": 4.25,
-            "image": "assets/images/side.svg",
-            "soldOut": false
+            "image": "assets/images/cucumber-herb-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/cucumber-herb.jpg",
+            "imageFallback": "assets/images/side.svg",
+            "imageWebp": "assets/images/cucumber-herb.webp"
           }
         ]
       },
@@ -255,16 +311,22 @@
             "name": "Honey Oat Square",
             "description": "Illustrative oat square. Placeholder item \u2014 ingredients to be confirmed.",
             "price": 3.75,
-            "image": "assets/images/sweet.svg",
-            "soldOut": false
+            "image": "assets/images/honey-oat-square-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/honey-oat-square.jpg",
+            "imageFallback": "assets/images/sweet.svg",
+            "imageWebp": "assets/images/honey-oat-square.webp"
           },
           {
             "id": "cocoa-date-bite",
             "name": "Cocoa Date Bite",
             "description": "Illustrative cocoa-date bite. Placeholder item.",
             "price": 3.5,
-            "image": "assets/images/sweet-cocoa.svg",
-            "soldOut": false
+            "image": "assets/images/cocoa-date-bite-photo.svg",
+            "soldOut": false,
+            "imageJpg": "assets/images/cocoa-date-bite.jpg",
+            "imageFallback": "assets/images/sweet-cocoa.svg",
+            "imageWebp": "assets/images/cocoa-date-bite.webp"
           }
         ]
       }

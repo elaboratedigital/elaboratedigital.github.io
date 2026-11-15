@@ -25,6 +25,25 @@ function escapeHtml(str) {
     .replace(/'/g, "&#39;");
 }
 
+function pictureTag({ webp, jpg, fallback, alt, className }) {
+  const cls = className ? ` class="${className}"` : "";
+  const sources = [];
+  if (webp) sources.push(`<source srcset="${escapeHtml(webp)}" type="image/webp">`);
+  if (jpg) sources.push(`<source srcset="${escapeHtml(jpg)}" type="image/jpeg">`);
+  return `<picture${cls}>${sources.join("")}<img src="${escapeHtml(fallback || jpg || webp)}" alt="${escapeHtml(alt)}"></picture>`;
+}
+
+function itemPicture(item, extraAlt) {
+  const alt = extraAlt || `Photograph of a hypothetical ${item.name}, a placeholder menu item, not a real restaurant dish`;
+  return pictureTag({
+    webp: null,
+    jpg: null,
+    fallback: item.image || item.imageFallback,
+    alt
+  });
+}
+
+
 async function sha256hex(text) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
   return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
@@ -215,7 +234,7 @@ function itemCard(item, options) {
     : `<button class="btn small" type="button" data-add="${escapeHtml(item.id)}">Add</button>`;
   return `
     <article class="card">
-      <img src="${escapeHtml(item.image)}" alt="Placeholder illustration, not a photograph of ${escapeHtml(item.name)}">
+      ${itemPicture(item)}
       <div class="card-body">
         ${tag}
         <h3>${escapeHtml(item.name)}</h3>
@@ -259,8 +278,13 @@ function renderHome(content) {
         <p class="fine">${escapeHtml(content.business.heroNote)}</p>
       </div>
       <figure class="hero-figure">
-        <img src="assets/images/hero-bowl.svg" alt="Original placeholder illustration of a bowl of greens, not a photograph of a real dish">
-        <figcaption>Original placeholder illustration · Not an actual dish</figcaption>
+        ${pictureTag({
+          webp: null,
+          jpg: null,
+          fallback: content.business.heroImage || content.business.heroImageFallback || "assets/images/hero-bowl.svg",
+          alt: "Photograph of a hypothetical kale bowl, placeholder food, not a real restaurant dish"
+        })}
+        <figcaption>Placeholder photograph of a hypothetical dish · Not an actual menu item from the restaurant</figcaption>
         <span class="badge-round">GOOD FOOD.<br>GOOD MOOD.</span>
       </figure>
     </section>
@@ -338,6 +362,14 @@ function renderAbout(content) {
   $("#main").innerHTML = `
     <section class="section wrap about-grid">
       <div>
+        ${pictureTag({
+          webp: null,
+          jpg: null,
+          fallback: content.about.storefrontImage || "assets/logos/logo-badge.svg",
+          alt: "Placeholder photograph of a hypothetical neighborhood kitchen storefront, not the real location",
+          className: "about-photo"
+        })}
+        <p class="fine" style="text-align:center">${escapeHtml(content.about.storefrontCaption || "Placeholder storefront photograph — not the real location.")}</p>
         <img class="about-badge" src="assets/logos/logo-badge.svg" alt="Concept logo for The Kale Company, pending client approval">
         <p class="fine" style="text-align:center">Concept logo · pending client approval</p>
       </div>
@@ -430,7 +462,7 @@ function renderCartRows(content) {
   $("#cart-summary").hidden = false;
   mount.innerHTML = `<div class="cart-list">${lines.map((line) => `
     <div class="cart-row" data-id="${escapeHtml(line.id)}">
-      <img src="${escapeHtml(line.image)}" alt="">
+      ${itemPicture(findItem(content, line.id), "")}
       <div>
         <strong>${escapeHtml(line.name)}</strong>
         <div class="fine">${money(line.unitCents)} each</div>
